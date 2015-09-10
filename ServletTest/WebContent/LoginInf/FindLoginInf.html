@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../bootstrap.min.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FindLoginInf</title>
+</head>
+<body>
+	<div style="margin-top: 2%;">
+		<form method="post"
+			action="/ServletTest/DealLoginInf/FindLoginInf.jsp">
+			<div class="form-group" style="float: left;">
+				<div style="float: left; font-size: 24px">
+					<label>请输入用户名：</label>
+				</div>
+				<div style="float: left">
+					<input type="text" class="form-control" name="LoginName"
+						style="width: 80%;" required="required" />
+				</div>
+			</div>
+			<div style="float: left;">
+				<button type="submit" class="btn btn-primary" name="Submit"
+					value="Find">查询</button>
+			</div>
+		</form>
+		<form method="get" action="/ServletTest/DealLoginInf/ShowAllLoginInf.jsp">
+			<div>
+				<button type="submit" class="btn btn-success" name="Submit"
+					value="FindAll">显示所有账户信息</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
