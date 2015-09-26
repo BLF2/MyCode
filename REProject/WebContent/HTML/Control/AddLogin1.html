@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/REProject/css/bootstrap.min.css" />
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="/REProject/js/bootstrap.min.js"></script>
+<title>AddLogin</title>
+<script type="text/javascript">
+function check(){
+	var pswd1 = document.form1.NewPswd.value;
+	var pswd2 = document.form1.NewPswd1.value;
+	if(pswd1 == pswd2){
+		return ture;
+	}else{
+		alert("两次密码不匹配！");
+	}
+	return false;
+}
+</script>
+</head>
+<body>
+<div>
+	提示：所有项目为必填项目！
+</div>
+<form action="/REProject/HTML/Control/Register1.jsp"  method="post" name="form1">
+<table class="table table-bordered">
+ <tr>
+ 	<td>用户名：</td>
+ 	<td><input type="text" name="NewName"  required="required" /></td>
+ </tr>
+ <tr>
+ 	<td>密码：</td>
+ 	<td><input type="password" id="p1" name="NewPswd"  required="required"/></td>
+ </tr>
+ <tr>
+ 	<td>确认密码：</td>
+ 	<td><input type="password" id="p2" name="NewPswd1"  required="required"/></td>
+ </tr>
+ <tr>
+ 	<td>权限：</td>
+ 	<td>
+ 	<input type="radio" name="IDN" value="2" checked="checked" />会员
+ 	<input type="radio" name="IDN" value="1" />管理员
+ 	</td>
+ </tr>
+ <tr>
+ 	<td><button type="submit" name="Submit" value="Register" onclick="return check()">提交</button></td>
+ 	<td><button type="reset">重置</button></td>
+ </tr>
+</table>
+</form>
+
+</body>
+</html>
